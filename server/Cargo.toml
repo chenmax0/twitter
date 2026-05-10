@@ -3,6 +3,9 @@ resolver = "2"
 members = ["crates/*"]
 
 [workspace.dependencies]
+database = { path = "crates/database" }
+authentication = { path = "crates/authentication" }
+
 axum = "0.7"
 dotenvy = "0.15"
 serde_json = "1.0"
@@ -12,4 +15,3 @@ strum = { version = "0.26", features = ["derive"] }
 uuid = { version = "1", features = ["v7", "serde"]}
 tower-http = { version = "0.5", features = ["cors", "trace"] }
 sqlx = { version = "0.8", features = ["uuid", "postgres", "runtime-tokio", "macros"] }
-
